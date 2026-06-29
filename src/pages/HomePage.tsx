@@ -38,7 +38,6 @@ function HomePage() {
       <section id="index" className="indexSection">
         <div className="sectionHeader">
           <p className="eyebrow">Index</p>
-          <h2>뮤지컬 별 목차</h2>
         </div>
 
         <div className="musicalGrid">
