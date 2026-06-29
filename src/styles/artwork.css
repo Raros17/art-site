@@ -1,0 +1,164 @@
+.artworkSection {
+  padding: 100px 0;
+  border-top: 1px solid rgba(245, 238, 227, 0.14);
+}
+
+.artworkList {
+  display: grid;
+  gap: 64px;
+}
+
+.artworkCard {
+  width: min(100%, 560px);
+  display: grid;
+  gap: 16px;
+  margin: 0 auto;
+}
+
+.artworkCard.series {
+  width: min(100%, 840px);
+}
+
+.artworkInfo {
+  display: grid;
+  gap: 10px;
+}
+
+.artworkYear {
+  margin: 0;
+  color: #c7a66b;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.emptyText {
+  color: #d8cec0;
+  font-size: 15px;
+}
+
+.singleImage {
+  display: grid;
+}
+
+.seriesImages {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.seriesLabel {
+  margin: 0;
+  color: #c7a66b;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.artworkImageButton {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(245, 238, 227, 0.16);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  cursor: zoom-in;
+}
+
+.artworkImageButton img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+.artworkImageButton:hover img {
+  transform: scale(1.015);
+}
+
+.speechBubble {
+  position: relative;
+  width: fit-content;
+  max-width: 92%;
+  padding: 14px 16px;
+  border: 1px solid rgba(245, 238, 227, 0.18);
+  border-radius: 18px;
+  background: rgba(245, 238, 227, 0.08);
+  color: #efe4d6;
+  line-height: 1.6;
+  word-break: keep-all;
+  font-size: 11pt;
+}
+
+.speechBubble::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 22px;
+  width: 12px;
+  height: 12px;
+  border-left: 1px solid rgba(245, 238, 227, 0.18);
+  border-top: 1px solid rgba(245, 238, 227, 0.18);
+  background: #211a16;
+  transform: rotate(45deg);
+}
+
+/* 홀수 번째 카드: 말풍선 왼쪽 */
+.artworkCard:nth-child(odd) .speechBubble {
+  justify-self: start;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* 짝수 번째 카드: 말풍선 오른쪽 */
+.artworkCard:nth-child(even) .speechBubble {
+  justify-self: end;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* 기본 말풍선 꼬리: 왼쪽 */
+.artworkCard:nth-child(odd) .speechBubble::before {
+  left: 22px;
+  right: auto;
+}
+
+/* 짝수 번째 말풍선 꼬리: 오른쪽 */
+.artworkCard:nth-child(even) .speechBubble::before {
+  left: auto;
+  right: 22px;
+}
+
+@media (max-width: 560px) {
+  .artworkCard:nth-child(even) .speechBubble,
+  .artworkCard:nth-child(odd) .speechBubble {
+    justify-self: start;
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .artworkCard:nth-child(even) .speechBubble::before,
+  .artworkCard:nth-child(odd) .speechBubble::before {
+    left: 22px;
+    right: auto;
+  }
+}
+
+@media (max-width: 840px) {
+  .artworkCard,
+  .artworkCard.series {
+    width: 100%;
+  }
+
+  .seriesImages {
+    grid-template-columns: 1fr;
+  }
+
+  .artworkImageButton img {
+    max-height: 520px;
+  }
+}

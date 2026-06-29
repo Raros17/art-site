@@ -1,0 +1,33 @@
+.detailHero {
+  min-height: ㅁauto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 96px 0 72px;
+}
+
+.backLink {
+  width: fit-content;
+  margin-bottom: 32px;
+  color: #c7a66b;
+  font-weight: 700;
+}
+
+.backLink:hover {
+  color: #f5eee3;
+}
+
+.detailMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.detailMeta span {
+  padding: 9px 13px;
+  border: 1px solid rgba(245, 238, 227, 0.18);
+  border-radius: 999px;
+  color: #d8cec0;
+  font-size: 14px;
+}
