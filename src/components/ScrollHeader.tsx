@@ -12,7 +12,6 @@ function ScrollHeader() {
 
   useEffect(() => {
     previousScrollY.current = window.scrollY;
-    setIsVisible(false);
 
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -48,8 +47,10 @@ function ScrollHeader() {
       >
         ← Back
       </button>
-
-      <span className="scrollHeaderTitle">Musical Drawing Archive</span>
+      <div className="scrollHeaderBrand">
+        <img src="/favicon.png" alt="" />
+        <span className="scrollHeaderTitle">Musical Drawing Archive</span>
+      </div>
     </header>
   );
 }

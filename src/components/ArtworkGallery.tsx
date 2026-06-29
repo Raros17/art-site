@@ -35,7 +35,6 @@ function ArtworkGallery({ artworks }: ArtworkGalleryProps) {
       <section className="artworkSection">
         <div className="sectionHeader">
           <p className="eyebrow">Gallery</p>
-          <h2>그림 목록</h2>
         </div>
 
         <p className="emptyText">아직 등록된 그림이 없습니다.</p>
@@ -47,7 +46,6 @@ function ArtworkGallery({ artworks }: ArtworkGalleryProps) {
     <section className="artworkSection">
       <div className="sectionHeader">
         <p className="eyebrow">Gallery</p>
-        <h2>그림 목록</h2>
       </div>
 
       <div className="artworkList">

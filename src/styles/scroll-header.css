@@ -67,3 +67,15 @@
     display: none;
   }
 }
+.scrollHeaderBrand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.scrollHeaderBrand img {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  object-fit: cover;
+}
