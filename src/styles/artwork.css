@@ -92,6 +92,8 @@
   line-height: 1.6;
   word-break: keep-all;
   font-size: 11pt;
+  white-space: pre-line;
+  text-align: left;
 }
 
 .speechBubble::before {
