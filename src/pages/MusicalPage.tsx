@@ -35,9 +35,13 @@ function MusicalPage() {
     );
   }
 
-  const musicalArtworks = artworks.filter(
-    artwork => artwork.musicalId === musical.id,
-  );
+  const musicalArtworks = artworks
+    .filter(artwork => artwork.musicalId === musical.id)
+    .sort((a, b) => {
+      if (b.year !== a.year) return b.year - a.year;
+
+      return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+    });
 
   return (
     <main className="page">

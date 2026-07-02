@@ -17,7 +17,7 @@ export const musicals: Musical[] = [
     englishTitle: "The Count",
     description: "오래 기다려왔어, 너를 기다려왔어",
     years: ["2026", "2025"],
-    mood: "Vampire · Castle · Eternal Night",
+    mood: "Vampire · Castle · Eternal",
     coverImage: "/images/covers/baekjak.jpg",
   },
   {
@@ -27,7 +27,7 @@ export const musicals: Musical[] = [
     englishTitle: "True Story",
     description: "그리움이란 이런 거야",
     years: ["2026"],
-    mood: "Mask · Longing · True Self",
+    mood: "Mask · Longing · Truth",
     coverImage: "/images/covers/truestory.jpg",
   },
   {
@@ -37,7 +37,7 @@ export const musicals: Musical[] = [
     englishTitle: "The Stone",
     description: "이건 내 얘긴데",
     years: ["2026"],
-    mood: "Road · Freedom · Rock'n'Roll",
+    mood: "Road · Freedom · Stone",
     coverImage: "/images/covers/stone.jpg",
   },
   {
@@ -47,7 +47,7 @@ export const musicals: Musical[] = [
     englishTitle: "Mahagoni",
     description: "어서 와요 나의 낙원에",
     years: ["2025"],
-    mood: "Paradise · Desire · Collapse",
+    mood: "E · S · F · D",
     coverImage: "/images/covers/mahagoni.jpg",
   },
   {
@@ -67,7 +67,17 @@ export const musicals: Musical[] = [
     englishTitle: "ETC",
     description: "-",
     years: ["2025"],
-    mood: "Fragments · Encore · Miscellany",
+    mood: "ETC",
     coverImage: "/images/covers/etc.jpg",
+  },
+  {
+    id: "midnight",
+    number: "07",
+    title: "미드나잇",
+    englishTitle: "Midmight",
+    description: "그날이 찾아왔어",
+    years: ["2026"],
+    mood: "11:59 · Sin · Choice",
+    coverImage: "/images/covers/",
   },
 ];

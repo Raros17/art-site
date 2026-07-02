@@ -28,7 +28,7 @@ function ArtworkCard({ artwork, onImageClick }: ArtworkCardProps) {
       </div>
 
       <div className="artworkInfo">
-        <p className="artworkYear">{artwork.year}</p>
+        <p className="artworkYear">{artwork.yearLabel ?? artwork.year}</p>
         {isSeries && (
           <p className="seriesLabel">SERIES · {artwork.images.length} PIECES</p>
         )}
