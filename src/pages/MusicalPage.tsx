@@ -1,36 +1,23 @@
-import { Link, useParams } from "react-router";
+import { useParams } from "react-router";
 import { musicals } from "../data/musicals";
 import { artworks } from "../data/artworks";
 import MusicalHero from "../components/MusicalHero";
 import ArtworkGallery from "../components/ArtworkGallery";
-import { useEffect } from "react";
+import PasswordGate from "../components/PasswordGate";
+
+const privatePagePasswords: Record<string, string> = {
+  "if-i-were-you": "xoxo",
+};
 
 function MusicalPage() {
   const { musicalId } = useParams();
 
   const musical = musicals.find(item => item.id === musicalId);
-  useEffect(() => {
-    if (!musical || !window.location.hash) return;
 
-    const targetId = window.location.hash.replace("#", "");
-
-    window.setTimeout(() => {
-      document.getElementById(targetId)?.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-      });
-    }, 0);
-  }, [musical, musicalId]);
-  if (!musical) {
+  if (!musical || !musicalId) {
     return (
       <main className="page">
-        <section className="detailHero">
-          <Link to="/" className="backLink">
-            ← Archive
-          </Link>
-          <h1>없는 페이지</h1>
-          <p className="heroText">아직 등록되지 않은 뮤지컬입니다.</p>
-        </section>
+        <p>존재하지 않는 페이지입니다.</p>
       </main>
     );
   }
@@ -43,12 +30,28 @@ function MusicalPage() {
       return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
     });
 
-  return (
+  const pageContent = (
     <main className="page">
       <MusicalHero musical={musical} />
       <ArtworkGallery artworks={musicalArtworks} />
     </main>
   );
+
+  const password = privatePagePasswords[musicalId];
+
+  if (password) {
+    return (
+      <PasswordGate
+        pageId={musicalId}
+        password={password}
+        title={musical.title}
+      >
+        {pageContent}
+      </PasswordGate>
+    );
+  }
+
+  return pageContent;
 }
 
 export default MusicalPage;

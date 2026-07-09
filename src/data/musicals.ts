@@ -18,7 +18,7 @@ export const musicals: Musical[] = [
     description: "오래 기다려왔어, 너를 기다려왔어",
     years: ["2026", "2025"],
     mood: "Vampire · Castle · Eternal",
-    coverImage: "/images/covers/baekjak.jpg",
+    coverImage: "/images/covers/banner-001-baekjak.webp",
   },
   {
     id: "truestory",
@@ -28,7 +28,7 @@ export const musicals: Musical[] = [
     description: "그리움이란 이런 거야",
     years: ["2026"],
     mood: "Mask · Longing · Truth",
-    coverImage: "/images/covers/truestory.jpg",
+    coverImage: "/images/covers/banner-006-truestory.webp",
   },
   {
     id: "stone",
@@ -38,7 +38,7 @@ export const musicals: Musical[] = [
     description: "이건 내 얘긴데",
     years: ["2026"],
     mood: "Road · Freedom · Stone",
-    coverImage: "/images/covers/stone.jpg",
+    coverImage: "/images/covers/banner-005-stone.webp",
   },
   {
     id: "mahagoni",
@@ -48,7 +48,7 @@ export const musicals: Musical[] = [
     description: "어서 와요 나의 낙원에",
     years: ["2025"],
     mood: "E · S · F · D",
-    coverImage: "/images/covers/mahagoni.jpg",
+    coverImage: "/images/covers/banner-004-mahagoni.webp",
   },
   {
     id: "if-i-were-you",
@@ -58,7 +58,7 @@ export const musicals: Musical[] = [
     description: "무명자의 시",
     years: ["2025"],
     mood: "Murder · Manuscript · Revenge",
-    coverImage: "/images/covers/ifiiwy.jpg",
+    coverImage: "/images/covers/banner-003-ifiiwy.webp",
   },
   {
     id: "etc",
@@ -68,7 +68,7 @@ export const musicals: Musical[] = [
     description: "-",
     years: ["2025"],
     mood: "ETC",
-    coverImage: "/images/covers/etc.jpg",
+    coverImage: "/images/covers/banner-002-etc.webp",
   },
   {
     id: "midnight",
@@ -78,6 +78,6 @@ export const musicals: Musical[] = [
     description: "그날이 찾아왔어",
     years: ["2026"],
     mood: "11:59 · Sin · Choice",
-    coverImage: "/images/covers/",
+    coverImage: "/images/covers/banner-007-midnight.webp",
   },
 ];
